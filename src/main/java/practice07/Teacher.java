@@ -19,15 +19,15 @@ public class Teacher extends Person{
 
     public String introduce(){
         if(klass != null){
-            return super.introduce() + String.format("I am a Teacher. I teach Class %d.", klass.getNumber());
+            return super.introduce() + String.format(" I am a Teacher. I teach Class %d.", klass.getNumber());
         }
-        return super.introduce() + "I am a Teacher. I teach No Class.";
+        return super.introduce() + " I am a Teacher. I teach No Class.";
     }
 
     public String introduceWith(Student student){
         if(klass.getNumber().equals(student.getKlass().getNumber())){
-            return super.introduce() + String.format("I am a Teacher. I teach %s.", student.getName());
+            return super.introduce() + String.format(" I am a Teacher. I teach %s.", student.getName());
         }
-        return super.introduce() + String.format("I am a Teacher. I don't teach %s.", student.getName());
+        return super.introduce() + String.format(" I am a Teacher. I don't teach %s.", student.getName());
     }
 }
